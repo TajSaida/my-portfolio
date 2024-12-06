@@ -4,7 +4,7 @@ import contactImag from '../../../public/test4545.jpeg';
 import { CiMail } from 'react-icons/ci';
 import { CiLinkedin } from 'react-icons/ci';
 import { AiOutlineDownload } from 'react-icons/ai';
-import { FaHeart } from "react-icons/fa";
+import { FaHeart } from 'react-icons/fa';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
@@ -24,40 +24,43 @@ function Contact() {
   }, []);
 
   const handleCookiePermission = () => {
-    setCanDownload(true); // Enable download after user allows cookies
+    setCanDownload(true);
     setShowCookiePrompt(false);
   };
 
   const handleDownload = () => {
-    console.log('clicked')
+    console.log('clicked');
     if (canDownload) {
-      // Trigger the download process
       const link = document.createElement('a');
-      link.href = 'your_file_url'; // Replace with your actual file URL
-      link.download = 'your_file_name'; // Replace with your desired file name
+      link.href = 'your_file_url';
+      link.download = 'your_file_name';
       link.click();
     } else {
-      setShowCookiePrompt(true); // Show prompt if download is attempted before permission
+      setShowCookiePrompt(true);
     }
   };
 
   return (
     <div className="p-8 bg-black min-h-screen">
-     {showCookiePrompt && (
-  <div className="fixed top-0 right-0 z-50 bg-[#525B44] text-white p-4 flex flex-col items-end mt-4 mr-4 rounded-md">
-    <p>We use cookies to enhance your experience. Please allow cookies.</p>
-    <button onClick={handleCookiePermission} className="bg-white my-2 hover:bg-[#525B44] hover:text-white hover:border hover:border-white text-[#525B44] font-bold p-2 rounded">
-      Allow
-    </button>
-  </div>
-)}  
+      {showCookiePrompt && (
+        <div className="fixed top-0 right-0 z-50 bg-[#525B44] text-white p-4 flex flex-col items-end mt-4 mr-4 rounded-md">
+          <p>
+            We use cookies to enhance your experience. Please allow cookies.
+          </p>
+          <button
+            onClick={handleCookiePermission}
+            className="bg-white my-2 hover:bg-[#525B44] hover:text-white hover:border hover:border-white text-[#525B44] font-bold p-2 rounded"
+          >
+            Allow
+          </button>
+        </div>
+      )}
       <div className="text-4xl flex justify-center font-bold  mb-16 fill-current text-[#D3F1DF] animate-colorChange  ">
         <h1 className="pr-2">Contact Me</h1>
       </div>
-     
+
       <div className="flex flex-col lg:text-xl items-center justify-center gap-4  ">
         <div className=" w-9/12 sm:w-11/12 md:w-10/12 cursor-pointer lg:text-2xl  h-full flex flex-col items-center border-[#252525]">
-   
           <div className="">
             <Image
               className="hidden md:block   lg:block opacity-70 ml-4 animate-pulse"
@@ -70,7 +73,6 @@ function Contact() {
 
           <div className=" mx-auto mt-5 flex flex-col  pr-2">
             <div className="flex flex-col items-center">
-              {/* Heading */}
               <h1 className="text-[#85A98F] font-bold text-left mb-0 text-xl sm:text-3xl md:text-4xl lg:text-6xl ">
                 Let&apos;s Work Together!
               </h1>
@@ -88,48 +90,51 @@ function Contact() {
               — I can&apos;t wait to hear all about it!
             </span>
 
-            <p className="text-right text-xl sm:text-2xl md:text-4xl lg:text-6xl  font-signature text-[#85A98F] py-5">
+            <p className="text-right text-xl sm:text-2xl md:text-4xl lg:text-6xl  font-signature text-[#85A98F] py-3">
               Saida Taj M R
             </p>
-            <span className="flex flex-row justify-end   mt-8 mb-24">
-              
-                <Link
-                  href="https://www.linkedin.com/in/saida-taj-m-r-b3656495/"
-                  target="_blank"
-                >
-                  <CiLinkedin
-                    className="mr-2 animate-pulse"
-                    size={40}
-                    fill="#85A98F"
-                  />
-                </Link>
+            <span className="flex flex-row justify-end   mb-6">
+              <Link
+                href="https://www.linkedin.com/in/saida-taj-m-r-b3656495/"
+                target="_blank"
+              >
+                <CiLinkedin
+                  className="mr-2 animate-pulse"
+                  size={30}
+                  fill="#85A98F"
+                />
+              </Link>
 
-          <Link href={`mailto:${emailAddress}`}>
-      <CiMail
-        className="mr-2 animate-pulse"
-        size={40}
-        fill="#85A98F"
-        color=""
-      />
-    </Link>
-    <button onClick={handleDownload} >
-      <AiOutlineDownload
-        className="mr-2 animate-pulse"
-        size={40}
-        fill="#85A98F"
-        color=""
-      />
-       <div>
-      {/* Your main app content */}
-   
-    </div>
-    </button>
-    </span>
-<hr className="border-b border-[#252525] mb-12" />
-
+              <Link href={`mailto:${emailAddress}`}>
+                <CiMail
+                  className="mr-2 animate-pulse"
+                  size={30}
+                  fill="#85A98F"
+                  color=""
+                />
+              </Link>
+              <button onClick={handleDownload}>
+                <AiOutlineDownload
+                  className="animate-pulse"
+                  size={30}
+                  fill="#85A98F"
+                  color=""
+                />
+                <div></div>
+              </button>
+            </span>
+            <hr className="border-b border-[#252525] mb-6" />
           </div>
-          <div>© {year} Made with <FaHeart fill='red'  className='inline'/> By <Link className='text-[#F29F58]' href="https://www.linkedin.com/in/saida-taj-m-r-b3656495/"
-                  target="_blank" >Saida</Link>  </div>
+          <div>
+            © {year} Made with <FaHeart fill="red" className="inline" /> By{' '}
+            <Link
+              className="text-[#F29F58]"
+              href="https://www.linkedin.com/in/saida-taj-m-r-b3656495/"
+              target="_blank"
+            >
+              Saida
+            </Link>{' '}
+          </div>
         </div>
       </div>
     </div>

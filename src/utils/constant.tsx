@@ -14,14 +14,14 @@ import {
   SiRecoil,
   SiNextdotjs,
   SiTailwindcss,
+  SiSonarqube,
+  SiJest,
+  SiWebpack,
 } from 'react-icons/si';
 import { VscAzureDevops } from 'react-icons/vsc';
 import { GrDocumentTest } from 'react-icons/gr';
-import { SiSonarqube } from 'react-icons/si';
 import { AiOutlineSecurityScan } from 'react-icons/ai';
-import { SiJest } from 'react-icons/si';
 import { LuFileBadge2 } from 'react-icons/lu';
-import { SiWebpack } from 'react-icons/si';
 import { BsFileEarmarkBarGraph } from 'react-icons/bs';
 
 interface Skill {
@@ -40,28 +40,31 @@ interface AboutMe {
   icon: React.ReactNode;
   info: React.ReactNode;
 }
-interface Info{
-  id:number;
-  details:string;
+interface Info {
+  id: number;
+  details: string;
 }
-interface ExperienceData{
-  id:number;
-  date:string;
-  company:string;
-  role:string;
-  info:Info[];
-  institute?:string;
-  location?:string;
+interface ExperienceData {
+  id: number;
+  date: string;
+  company: string;
+  role: string;
+  info: Info[];
+  institute?: string;
+  location?: string;
 }
-interface Education{
-  id:string;
-  institute:string;
-  location:string;
-  date:string;
-  company?:string;
-  role?:string;
-  info?:Info[];
+interface Education {
+  id: string;
+  institute: string;
+  location: string;
+  date: string;
+  company?: string;
+  role?: string;
+  info?: Info[];
 }
+
+export const options: string[] = ['Experience', 'Education'];
+
 export const skills: CategorySkills[] = [
   {
     category: 'Languages',
@@ -263,7 +266,7 @@ export const aboutMe: AboutMe[] = [
     ),
   },
 ];
-export const experienceData :ExperienceData[] = [
+export const experienceData: ExperienceData[] = [
   {
     id: 1,
     date: 'Dec 2021 - Current | Bengaluru, India',
@@ -285,7 +288,7 @@ export const experienceData :ExperienceData[] = [
         details:
           'Collaborated with teammates to deliver valuable features meeting business and customer needs.',
       },
-     
+
       {
         id: 16,
         details:
@@ -307,19 +310,18 @@ export const experienceData :ExperienceData[] = [
       },
       {
         id: 22,
-        details: "I&apos;m skilled at updating build files in CI/CD pipelines.",
+        details: 'I&apos;m skilled at updating build files in CI/CD pipelines.',
       },
       {
         id: 23,
         details:
           'Applied emerging technologies to update and maintain site applicability.',
       },
-       {
+      {
         id: 14,
         details:
           'Revised, modularized, and updated old code bases to modern development standards, reducing operating costs and improving functionality.',
       },
-     
     ],
   },
   {
@@ -361,7 +363,7 @@ export const experienceData :ExperienceData[] = [
         details:
           'Developed user-friendly components with validation and error handling.',
       },
-       {
+      {
         id: 15,
         details:
           'Resolve defects/bugs during QA testing, pre-production, production, and post-release patches',
@@ -370,23 +372,23 @@ export const experienceData :ExperienceData[] = [
   },
 ];
 
-export const education : Education[]=[
+export const education: Education[] = [
   {
-    id:'1',
-    institute:'SIETK (Bachelor of ECE)',
-    location:'Puttur , Andhra Pradesh , India',
-    date:'Sep 2011 - May 2015'
+    id: '1',
+    institute: 'SIETK (Bachelor of ECE)',
+    location: 'Puttur , Andhra Pradesh , India',
+    date: 'Sep 2011 - May 2015',
   },
-    {
-    id:'2',
-    institute:'Sri Chaitanya Junior Collage (MPC)',
-    location:'Tirupati , Andhra Pradesh , India',
-    date:'Aug 2009 - May 2011'
+  {
+    id: '2',
+    institute: 'Sri Chaitanya Junior Collage (MPC)',
+    location: 'Tirupati , Andhra Pradesh , India',
+    date: 'Aug 2009 - May 2011',
   },
-    {
-    id:'3',
-    institute:'Viswam Talent School (SSC)',
-    location:'Tirupati , Andhra Pradesh , India',
-    date:'Jun 2007 - May 2009'
-  }
-]
+  {
+    id: '3',
+    institute: 'Viswam Talent School (SSC)',
+    location: 'Tirupati , Andhra Pradesh , India',
+    date: 'Jun 2007 - May 2009',
+  },
+];
