@@ -63,13 +63,18 @@ interface ExperienceData{
   date:string;
   company:string;
   role:string;
-  info:Info[]
+  info:Info[];
+  institute?:string;
+  location?:string;
 }
 interface Education{
   id:string;
   institute:string;
   location:string;
   date:string;
+  company?:string;
+  role?:string;
+  info?:Info[];
 }
 export const skills: CategorySkills[] = [
   {

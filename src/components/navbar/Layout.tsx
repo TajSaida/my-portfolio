@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import Navbar from './Navbar';
 
-const Layout = ({ children }) => {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 //   const pathname = usePathname();
 
   return (
