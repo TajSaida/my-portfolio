@@ -9,7 +9,6 @@ import { RiToolsFill } from 'react-icons/ri';
 import { IoMailSharp } from 'react-icons/io5';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { usePathname } from 'next/navigation';
-const icon = RiHomeHeartFill;
 const navData = [
   {
     id: 1,

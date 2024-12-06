@@ -5,10 +5,8 @@ import {
   FaJsSquare,
   FaReact,
   FaGitAlt,
-  FaBitbucket,
   FaBootstrap,
   FaJira,
-  FaLess,
 } from 'react-icons/fa';
 import { TbBrandRedux, TbBrandAngular, TbBrandBitbucket } from 'react-icons/tb';
 import { BiLogoTypescript } from 'react-icons/bi';
@@ -16,28 +14,16 @@ import {
   SiRecoil,
   SiNextdotjs,
   SiTailwindcss,
-  SiPostcss,
-  SiAzuredevops,
 } from 'react-icons/si';
-import { IoLogoSass } from 'react-icons/io5';
-import { BsFiletypeScss } from 'react-icons/bs';
 import { VscAzureDevops } from 'react-icons/vsc';
-import { VscGraphLine } from 'react-icons/vsc';
-import { GrDocumentPerformance, GrDocumentTest } from 'react-icons/gr';
-import { SiSonarqube, SiHackaday } from 'react-icons/si';
-import { MdOutlineSecurity, MdSecurity } from 'react-icons/md';
+import { GrDocumentTest } from 'react-icons/gr';
+import { SiSonarqube } from 'react-icons/si';
 import { AiOutlineSecurityScan } from 'react-icons/ai';
 import { SiJest } from 'react-icons/si';
-import { GrTest } from 'react-icons/gr';
-import { MdOutlineHighQuality } from 'react-icons/md';
-import { TbTestPipe } from 'react-icons/tb';
-import { GrShieldSecurity } from 'react-icons/gr';
-import { LuFileBadge } from 'react-icons/lu';
 import { LuFileBadge2 } from 'react-icons/lu';
 import { SiWebpack } from 'react-icons/si';
 import { BsFileEarmarkBarGraph } from 'react-icons/bs';
 
-// Skill Interfaces
 interface Skill {
   id: number;
   icon: React.ReactNode;
@@ -321,7 +307,7 @@ export const experienceData :ExperienceData[] = [
       },
       {
         id: 22,
-        details: "I'm skilled at updating build files in CI/CD pipelines.",
+        details: "I&apos;m skilled at updating build files in CI/CD pipelines.",
       },
       {
         id: 23,

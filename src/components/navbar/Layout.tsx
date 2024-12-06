@@ -1,9 +1,7 @@
 
-import { usePathname } from 'next/navigation';
 import Navbar from './Navbar';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-//   const pathname = usePathname();
 
   return (
     <div>

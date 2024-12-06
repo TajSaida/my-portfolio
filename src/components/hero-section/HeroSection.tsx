@@ -34,7 +34,7 @@ const HeroSection = () => {
 
         {/* Hero Section Content */}
         <h1 className="text-[#D3F1DF] text-3xl  sm:text-2xl font-serif font-bold text-center lg:text-left">
-          - I'M{' '}
+          - I&apos;M{' '}
           <span className="fill-current sm:text-3xl md:text-4xl xl:text-5xl text-[#764abc] animate-colorChange">
             Saida Taj M R.
           </span>
@@ -43,7 +43,7 @@ const HeroSection = () => {
           SENIOR UI DEVELOPER
         </h2>
         <p className="text-white text-sm sm:text-base md:text-xl xl:text-lg mt-4 w-full sm:w-[80%] lg:w-[50%] pb-8 text-center font-serif lg:text-left">
-          I'm a software engineer with a passion for developing robust and
+          I&apos;m a software engineer with a passion for developing robust and
           scalable solutions, with a focus on clean code and user-friendly
           design.
         </p>

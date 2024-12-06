@@ -10,7 +10,7 @@ function About() {
 
       <div className="flex flex-col  text-base lg:text-xl items-center justify-center gap-4 ">
         <p className="lg:text-xl w-9/12 sm:w-11/12 md:w-10/12  text-center font-serif ">
-          Bringing 7 years of experience, I'm committed to progression and
+          Bringing 7 years of experience, I&apos;m committed to progression and
           continuous improvement, actively engaging in solution-oriented
           thinking and action.
         </p>
