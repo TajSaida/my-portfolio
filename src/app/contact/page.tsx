@@ -56,7 +56,7 @@ function Contact() {
         </div>
       )}
       <div className="text-4xl flex justify-center font-bold  mb-16 fill-current text-[#D3F1DF] animate-colorChange  ">
-        <h1 className="pr-2">Contact Me</h1>
+        <h1 className="pr-2 text-[#D3F1DF] ">Contact Me</h1>
       </div>
 
       <div className="flex flex-col lg:text-xl items-center justify-center gap-4  ">
@@ -77,7 +77,7 @@ function Contact() {
                 Let&apos;s Work Together!
               </h1>
 
-              <p className=" mt-2 text-base lg:text-xl  lg:w-3/5 m-2 p-4 ">
+              <p className=" text-white mt-2 text-base lg:text-xl  lg:w-3/5 m-2 p-4 ">
                 Looking for an opportunity to work in a challenging position
                 combining my skills in Software Engineering, which provides
                 professional development, interesting experiences and personal
@@ -86,14 +86,14 @@ function Contact() {
                 <br />
               </p>
             </div>
-            <span className="text-right">
+            <span className="text-white text-right">
               — I can&apos;t wait to hear all about it!
             </span>
 
             <p className="text-right text-xl sm:text-2xl md:text-4xl lg:text-6xl  font-signature text-[#85A98F] py-3">
               Saida Taj M R
             </p>
-            <span className="flex flex-row justify-end   mb-6">
+            <span className="flex flex-row justify-end  mb-6">
               <Link
                 href="https://www.linkedin.com/in/saida-taj-m-r-b3656495/"
                 target="_blank"
@@ -125,7 +125,7 @@ function Contact() {
             </span>
             <hr className="border-b border-[#252525] mb-6" />
           </div>
-          <div>
+          <div className="text-white">
             © {year} Made with <FaHeart fill="red" className="inline" /> By{' '}
             <Link
               className="text-[#F29F58]"

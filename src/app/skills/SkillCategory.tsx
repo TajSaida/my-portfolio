@@ -28,7 +28,9 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ category, skills }) => (
         >
           <div className=" ">{skill.icon}</div>
           <div className=" flex flex-col text-left">
-            <span className="text-base lg:text-md">{skill.skill}</span>
+            <span className="text-base lg:text-md text-white">
+              {skill.skill}
+            </span>
             {skill.yoe && (
               <span className="text-xs text-[#525B44]">XP: {skill.yoe} YR</span>
             )}
