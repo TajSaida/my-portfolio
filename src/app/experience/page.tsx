@@ -70,7 +70,7 @@ function Experience() {
                 {exp?.date}
               </span>
 
-              {exp?.info?.map((info, i) => (
+              {exp?.info?.map((info) => (
                 <p key={info?.id} className="text-base lg:text:xl text-white">
                   {info?.details}
                 </p>

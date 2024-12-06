@@ -72,7 +72,7 @@ function Contact() {
             <div className="flex flex-col items-center">
               {/* Heading */}
               <h1 className="text-[#85A98F] font-bold text-left mb-0 text-xl sm:text-3xl md:text-4xl lg:text-6xl ">
-                Let's Work Together!
+                Let&apos;s Work Together!
               </h1>
 
               <p className=" mt-2 text-base lg:text-xl  lg:w-3/5 m-2 p-4 ">
@@ -85,7 +85,7 @@ function Contact() {
               </p>
             </div>
             <span className="text-right">
-              — I can’t wait to hear all about it!
+              — I can&apos;t wait to hear all about it!
             </span>
 
             <p className="text-right text-xl sm:text-2xl md:text-4xl lg:text-6xl  font-signature text-[#85A98F] py-5">

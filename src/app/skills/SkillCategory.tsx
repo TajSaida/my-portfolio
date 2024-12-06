@@ -1,5 +1,4 @@
 import React from "react";
-import SkillItem from "./SkillItem";
 
 interface Skill {
   id: number;
