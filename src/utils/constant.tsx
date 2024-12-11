@@ -52,6 +52,8 @@ interface ExperienceData {
   info: Info[];
   institute?: string;
   location?: string;
+  addMrgin?: boolean;
+  addMrginExp?: boolean;
 }
 interface Education {
   id: string;
@@ -60,7 +62,9 @@ interface Education {
   date: string;
   company?: string;
   role?: string;
+  addMrginExp?: boolean;
   info?: Info[];
+  addMrgin?: boolean;
 }
 
 export const options: string[] = ['Experience', 'Education'];
@@ -83,7 +87,7 @@ export const skills: CategorySkills[] = [
       },
       {
         id: 3,
-        icon: <FaJsSquare size={50} color="#f0cf0a" />,
+        icon: <FaJsSquare size={45} color="#f0cf0a" />,
         skill: 'JavaScript',
         yoe: '7',
       },
@@ -112,7 +116,7 @@ export const skills: CategorySkills[] = [
       },
       {
         id: 18,
-        icon: <SiJest size={40} color="#f0cf0a" />,
+        icon: <SiJest size={45} color="#f0cf0a" />,
         skill: 'Jest',
         yoe: '5',
       },
@@ -129,13 +133,13 @@ export const skills: CategorySkills[] = [
       },
       {
         id: 9,
-        icon: <SiNextdotjs size={50} color="green" />,
+        icon: <SiNextdotjs size={45} color="green" />,
         skill: 'Next.js',
         yoe: '1',
       },
       {
         id: 10,
-        icon: <SiTailwindcss size={50} color="#38b2ac" />,
+        icon: <SiTailwindcss size={45} color="#38b2ac" />,
         skill: 'Tailwind CSS',
         yoe: '2',
       },
@@ -158,13 +162,13 @@ export const skills: CategorySkills[] = [
       },
       {
         id: 13,
-        icon: <TbBrandBitbucket size={50} color="#2684ff" />,
+        icon: <TbBrandBitbucket size={45} color="#2684ff" />,
         skill: 'Bitbucket',
         yoe: '4',
       },
       {
         id: 14,
-        icon: <VscAzureDevops size={50} color="#0078d7" />,
+        icon: <VscAzureDevops size={45} color="#0078d7" />,
         skill: 'Azure DevOps',
         yoe: '3',
       },
@@ -206,27 +210,27 @@ export const aboutMe: AboutMe[] = [
     id: 1,
     icon: <BsFileEarmarkBarGraph size={50} color="#f0cf0a" />,
     info: (
-      <>
+      <div className="text-center md:text-left">
         <span className="text-[#00ff2f]">
           Optimized initial webpage loading{' '}
         </span>
         by 70% using advanced techniques in React.js and using webpack,
         resulting in a significantly faster user experience.{' '}
-      </>
+      </div>
     ),
   },
   {
     id: 2,
     icon: <GrDocumentTest className="scale-x-75" size={50} color="#f0cf0a" />,
     info: (
-      <>
+      <div className="text-center md:text-left">
         <span className="text-[#00ff2f]">
           Implemented comprehensive Jest test cases
         </span>
         Implemented comprehensive Jest test cases covering 70% of the current
         application, including Redux integration, ensuring application stability
         and maintainability.
-      </>
+      </div>
     ),
   },
   {
@@ -239,7 +243,7 @@ export const aboutMe: AboutMe[] = [
       />
     ),
     info: (
-      <>
+      <div className="text-center md:text-left">
         <span className="text-[#00ff2f]">
           Successfully integrated SonarQube{' '}
         </span>
@@ -248,21 +252,21 @@ export const aboutMe: AboutMe[] = [
           30-40% reduction in code duplication
         </span>
         ,promoting cleaner and more efficient code.
-      </>
+      </div>
     ),
   },
   {
     id: 4,
     icon: <AiOutlineSecurityScan size={60} color="#f0cf0a" />,
     info: (
-      <>
+      <div className="text-center md:text-left">
         I focused on security by{' '}
         <span className="text-[#00ff2f]">preventing clickjacking</span> ,
         <span className="text-[#00ff2f]">
           tokens both before and after authentication
         </span>{' '}
         and fixed most of the security related issues.
-      </>
+      </div>
     ),
   },
 ];
@@ -352,6 +356,7 @@ export const experienceData: ExperienceData[] = [
     date: 'Jul 2016 - Feb 2019 | Bengaluru, India',
     company: 'CGI',
     role: 'Associate System Engineer',
+    addMrginExp: true,
     info: [
       {
         id: 41,
@@ -375,9 +380,10 @@ export const experienceData: ExperienceData[] = [
 export const education: Education[] = [
   {
     id: '1',
-    institute: 'SIETK (Bachelor of ECE)',
+    institute: `SIETK (Bachelor of ECE)`.padEnd(40, ' '),
     location: 'Puttur , Andhra Pradesh , India',
     date: 'Sep 2011 - May 2015',
+    addMrgin: true,
   },
   {
     id: '2',

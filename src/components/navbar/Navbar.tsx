@@ -68,7 +68,7 @@ const Navbar = () => {
               href={data.href}
               className={`${
                 pathname === data.href ? 'bg-white text-[#525B44]' : ''
-              } flex items-center justify-center w-14 h-14 rounded-full transition-all  group-hover:bg-[#525B44] duration-700 ease-in-out bg-[#525B44]`}
+              } flex items-center justify-center w-14 h-14 rounded-full transition-all  group-hover:bg-[#91AC8F] duration-700 ease-in-out bg-[#525B44]`}
             >
               {data.icon}
             </Link>

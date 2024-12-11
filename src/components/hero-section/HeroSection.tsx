@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImage from '../../../public/work-8660354_1280.webp';
+import profileImage from '../../../public/heroSectionimg.webp';
 import Image from 'next/image';
 import Link from 'next/link';
 

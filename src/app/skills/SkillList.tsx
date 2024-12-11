@@ -4,7 +4,7 @@ import { skills } from '@/utils/constant';
 const SkillList: React.FC = () => (
   <div className="p-8 bg-black min-h-screen overflow-y-scroll no-scrollbar">
     <div className=" text-4xl flex justify-center font-bold  mb-16 fill-current text-[#D3F1DF] animate-colorChange  ">
-      <h1 className="pr-2 text-[#D3F1DF]">My Skills</h1>
+      <h1 className="mt-20 lg:mt-0 ">My Skills</h1>
     </div>
 
     <div className="flex lg:text-xl items-center justify-center gap-4  ">
