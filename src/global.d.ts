@@ -1,7 +1,7 @@
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void; 
+    gtag?: (event: string, action: string, params?: Record<string, any>) => void;
   }
 }
 
