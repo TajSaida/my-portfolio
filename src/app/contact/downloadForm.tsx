@@ -1,5 +1,5 @@
 'use client';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 
 interface FormData {
   username: string;
@@ -26,6 +26,10 @@ const MyComponent: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
   });
   const [canDownload, setCanDownload] = useState<boolean>(false);
   const [errors, setErrors] = useState<Errors>({});
+
+  useEffect(() => {
+    validateForm();
+  }, [formData]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
