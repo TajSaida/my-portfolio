@@ -88,7 +88,7 @@ const Navbar = () => {
           </div>
           <button
             onClick={toggleMenu}
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200   "
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#B2C9AD] rounded-lg hover:bg-[#66785F] focus:outline-none focus:ring-2 focus:ring-[#66785F]  "
           >
             <RxHamburgerMenu className="w-20 h-20" color="D3F1DF" />
           </button>
