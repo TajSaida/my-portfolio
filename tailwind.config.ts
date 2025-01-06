@@ -10,13 +10,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        signature: ['"Corinthia","Dancing Script"', 'cursive'], // Example font
+        signature: ['"Corinthia","Dancing Script"', 'cursive'], 
       },
       keyframes: {
         colorChange: {
           '0%': { color: '#f0cf0a' },
           '50%': { color: '#ff5722' },
-          '100%': { color: '#61dafb' },
+          '100%': { color: '#85A98F' },
         },
         slideLeft: {
           '0%': { transform: 'translateX(100%)', },

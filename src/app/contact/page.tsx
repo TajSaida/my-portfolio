@@ -94,7 +94,7 @@ function Contact() {
             </span>
             <hr className="border-b border-[#252525] mb-6" />
           </div>
-          <footer>
+          <footer className="text-center">
             <div className="text-white">
               © {year} Made with <FaHeart fill="red" className="inline" /> By{' '}
               <Link
