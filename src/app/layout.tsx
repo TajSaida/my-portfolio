@@ -6,11 +6,18 @@ import Loading from './loading';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  icons: {
-    icon: '/favicon.ico',
-  },
   title: 'Saida',
   description: 'Portfolio',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'icon',
+      url: '/favicon-32x32.png',
+      sizes: '32x32',
+    },
+    shortcut: '/favicon-16x16.png',
+  },
 };
 
 export default function RootLayout({

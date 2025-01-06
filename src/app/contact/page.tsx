@@ -35,8 +35,8 @@ function Contact() {
               className=" md:block rounded-full  lg:block "
               src={contactImag}
               alt="contact-img"
-              width={250}
-              height={250}
+              width={200}
+              height={200}
             />
           </div>
 
