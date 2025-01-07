@@ -50,7 +50,6 @@ interface UserInfo {
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showCookieConsent, setShowCookieConsent] = useState(false);
-  const [analyticsConsent, setAnalyticsConsent] = useState(false);
   const pathname = usePathname();
   const [userInfo, setUserInfo] = useState<UserInfo>({});
 
@@ -58,8 +57,6 @@ const Navbar = () => {
     const consent = localStorage.getItem('analyticsConsent');
     if (consent === null) {
       setShowCookieConsent(true);
-    } else {
-      setAnalyticsConsent(consent === 'true');
     }
   }, []);
   const fetchLocation = async (): Promise<{
@@ -110,7 +107,6 @@ const Navbar = () => {
         country: location?.country,
       };
 
-      console.log('User Details:', userDetails);
       setUserInfo(userDetails);
       sendToAnalytics(userDetails);
     } else {
@@ -187,7 +183,7 @@ const Navbar = () => {
               Hi
             </span>
             <span className="self-center text-2xl font-semibold  whitespace-nowrap text-white font-serif">
-              Welcome,
+              {userInfo.name || 'Welcome'},
             </span>
           </div>
           <button
