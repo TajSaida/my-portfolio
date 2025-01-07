@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RiHomeHeartFill } from 'react-icons/ri';
 import { IoMdContact } from 'react-icons/io';
 import { MdWorkHistory } from 'react-icons/md';
@@ -41,9 +41,82 @@ const navData = [
     icon: <IoMailSharp className="w-7 h-7" />,
   },
 ];
+interface UserInfo {
+  name?: string;
+  email?: string;
+  city?: string;
+  country?: string;
+}
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showCookieConsent, setShowCookieConsent] = useState(false);
+  const [analyticsConsent, setAnalyticsConsent] = useState(false);
   const pathname = usePathname();
+  const [userInfo, setUserInfo] = useState<UserInfo>({});
+
+  useEffect(() => {
+    const consent = localStorage.getItem('analyticsConsent');
+    if (consent === null) {
+      setShowCookieConsent(true);
+    } else {
+      setAnalyticsConsent(consent === 'true');
+    }
+  }, []);
+  const fetchLocation = async (): Promise<{
+    city?: string;
+    country?: string;
+  } | null> => {
+    try {
+      const response = await fetch('https://ipapi.co/json/');
+      if (response.ok) {
+        const location = await response.json();
+        return { city: location.city, country: location.country_name };
+      }
+    } catch (error) {
+      console.error('Error fetching location:', error);
+    }
+    return null;
+  };
+  const sendToAnalytics = (userInfo: {
+    name?: string;
+    email?: string;
+    city?: string;
+    country?: string;
+  }) => {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'user_info', {
+        name: userInfo.name,
+        email: userInfo.email,
+        city: userInfo.city,
+        country: userInfo.country,
+      });
+    } else {
+      console.warn(
+        'Google Analytics is not initialized or gtag is unavailable.'
+      );
+    }
+  };
+
+  const handleConsent = async (consent: boolean) => {
+    setShowCookieConsent(false);
+    if (consent) {
+      const location = await fetchLocation();
+      const cookies = parseCookies();
+
+      const userDetails = {
+        name: cookies.username || 'Guest',
+        email: cookies.email || 'N/A',
+        city: location?.city,
+        country: location?.country,
+      };
+
+      console.log('User Details:', userDetails);
+      setUserInfo(userDetails);
+      sendToAnalytics(userDetails);
+    } else {
+      console.log('Cookie consent denied.');
+    }
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -52,9 +125,40 @@ const Navbar = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-
+  const parseCookies = (): Record<string, string> => {
+    const cookies = document.cookie.split('; ');
+    const cookieData: Record<string, string> = {};
+    cookies.forEach((cookie) => {
+      const [key, value] = cookie.split('=');
+      cookieData[key] = decodeURIComponent(value);
+    });
+    return cookieData;
+  };
   return (
     <>
+      {showCookieConsent && (
+        <div className="fixed bottom-0 left-0 right-0  bg-[#5A6C57] text-white p-4  z-50 sm:">
+          <p className=" text-center text-base mb-2 ">
+            We use cookies to enhance your experience. By continuing, you agree
+            to our use of cookies.
+          </p>
+          <div className="flex space-x-4 justify-center">
+            <button
+              className="bg-[#D3F1DF] text-[#525B44] py-1 px-3 rounded hover:bg-[#5A6C57] hover:text-white"
+              onClick={() => handleConsent(true)}
+            >
+              Allow
+            </button>
+            <button
+              onClick={() => handleConsent(false)}
+              className="bg-[#91AC8F] text-[#525B44] py-1 px-3 rounded hover:bg-[#5A6C57] hover:text-white"
+            >
+              Deny
+            </button>
+          </div>
+        </div>
+      )}
+
       <nav className="w-32 pr-8 flex-col items-end justify-center hidden lg:flex lg:justify-center md:flex md: gap-4 fixed right-0 top-1/2 transform -translate-y-1/2">
         {navData.map((data) => (
           <div
@@ -76,7 +180,7 @@ const Navbar = () => {
         ))}
       </nav>
 
-      <nav className="bg-[#525B44] border-[#5A6C57]   fixed w-full z-10 md:hidden">
+      <nav className="bg-[#525B44] border-[#5A6C57] fixed w-full z-10 md:hidden">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex-1">
             <span className="self-center text-2xl font-semibold  whitespace-nowrap text-[#D3F1DF] mr-3 font-serif">
