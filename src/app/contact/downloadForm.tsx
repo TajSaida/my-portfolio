@@ -58,7 +58,7 @@ const MyComponent: React.FC<DownloadModalProps> = ({ isOpen, onClose }) => {
     validateForm();
     if (canDownload) {
       const link = document.createElement('a');
-      link.href = '/M.R_saida_Taj.pdf';
+      link.href = '/saidatajcv.pdf';
       link.download = 'SaidaTajM.R_resume.pdf';
       link.click();
       link.remove();
