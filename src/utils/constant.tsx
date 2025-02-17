@@ -225,7 +225,7 @@ export const aboutMe: AboutMe[] = [
     info: (
       <div className="text-center md:text-left">
         <span className="text-[#00ff2f]">
-          Implemented comprehensive Jest test cases 70% of the
+          Implemented comprehensive Jest test cases 70% of the{' '}
         </span>
         current application, including Redux integration, ensuring application
         stability and maintainability.
