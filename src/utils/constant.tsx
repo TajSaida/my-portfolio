@@ -9,7 +9,9 @@ import {
   FaJira,
 } from 'react-icons/fa';
 import { TbBrandRedux, TbBrandAngular, TbBrandBitbucket } from 'react-icons/tb';
+import { FaVuejs } from 'react-icons/fa';
 import { BiLogoTypescript } from 'react-icons/bi';
+import { LiaNode } from 'react-icons/lia';
 import {
   SiRecoil,
   SiNextdotjs,
@@ -100,7 +102,7 @@ export const skills: CategorySkills[] = [
         id: 4,
         icon: <FaReact size={50} color="#61dafb" />,
         skill: 'React',
-        yoe: '7',
+        yoe: '6',
       },
       {
         id: 5,
@@ -120,16 +122,28 @@ export const skills: CategorySkills[] = [
         skill: 'Jest',
         yoe: '5',
       },
+      {
+        id: 18,
+        icon: <LiaNode size={45} color="green" />,
+        skill: 'Node.js',
+        yoe: '1',
+      },
     ],
   },
   {
     category: 'Frameworks',
     skills: [
       {
+        id: 40,
+        icon: <FaVuejs size={50} color="green" />,
+        skill: 'Vue.js',
+        yoe: '1',
+      },
+      {
         id: 8,
         icon: <TbBrandAngular size={50} color="#dd0031" />,
         skill: 'Angular',
-        yoe: '1',
+        yoe: '1.5',
       },
       {
         id: 9,

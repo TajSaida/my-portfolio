@@ -64,7 +64,7 @@ function Contact() {
             </p>
             <span className="flex flex-row justify-end  mb-6">
               <Link
-                href="https://www.linkedin.com/in/saida-taj-m-r-b3656495/"
+                href="https://www.linkedin.com/in/saidatajmr/"
                 target="_blank"
               >
                 <CiLinkedin
