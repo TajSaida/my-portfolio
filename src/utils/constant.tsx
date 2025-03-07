@@ -133,17 +133,17 @@ export const skills: CategorySkills[] = [
   {
     category: 'Frameworks',
     skills: [
-      {
-        id: 40,
-        icon: <FaVuejs size={50} color="green" />,
-        skill: 'Vue.js',
-        yoe: '1',
-      },
+      // {
+      //   id: 40,
+      //   icon: <FaVuejs size={50} color="green" />,
+      //   skill: 'Vue.js',
+      //   yoe: '1',
+      // },
       {
         id: 8,
         icon: <TbBrandAngular size={50} color="#dd0031" />,
         skill: 'Angular',
-        yoe: '1.5',
+        yoe: '3.5',
       },
       {
         id: 9,
