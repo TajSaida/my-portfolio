@@ -143,7 +143,7 @@ export const skills: CategorySkills[] = [
         id: 8,
         icon: <TbBrandAngular size={50} color="#dd0031" />,
         skill: 'Angular',
-        yoe: '3.5',
+        yoe: '1.5',
       },
       {
         id: 9,
