@@ -9,9 +9,16 @@ import {
   FaJira,
 } from 'react-icons/fa';
 import { TbBrandRedux, TbBrandAngular, TbBrandBitbucket } from 'react-icons/tb';
-import { FaVuejs } from 'react-icons/fa';
+import { LuRocket } from 'react-icons/lu';
 import { BiLogoTypescript } from 'react-icons/bi';
 import { LiaNode } from 'react-icons/lia';
+import {
+  RiShieldCheckLine,
+  RiBugLine,
+  RiCheckboxCircleLine,
+  RiNodeTree,
+  RiDeviceLine,
+} from 'react-icons/ri';
 import {
   SiRecoil,
   SiNextdotjs,
@@ -21,10 +28,6 @@ import {
   SiWebpack,
 } from 'react-icons/si';
 import { VscAzureDevops } from 'react-icons/vsc';
-import { GrDocumentTest } from 'react-icons/gr';
-import { AiOutlineSecurityScan } from 'react-icons/ai';
-import { LuFileBadge2 } from 'react-icons/lu';
-import { BsFileEarmarkBarGraph } from 'react-icons/bs';
 
 interface Skill {
   id: number;
@@ -102,7 +105,7 @@ export const skills: CategorySkills[] = [
         id: 4,
         icon: <FaReact size={50} color="#61dafb" />,
         skill: 'React',
-        yoe: '6',
+        yoe: '7',
       },
       {
         id: 5,
@@ -222,20 +225,20 @@ export const skills: CategorySkills[] = [
 export const aboutMe: AboutMe[] = [
   {
     id: 1,
-    icon: <BsFileEarmarkBarGraph size={50} color="#f0cf0a" />,
+    icon: <LuRocket size={50} color="#f0cf0a" />,
     info: (
       <div className="text-center md:text-left">
         <span className="text-[#00ff2f]">
           Optimized initial webpage loading{' '}
         </span>
         by 70% using advanced techniques in React.js and using webpack,
-        resulting in a significantly faster user experience.{' '}
+        resulting in a significantly faster user experience.
       </div>
     ),
   },
   {
     id: 2,
-    icon: <GrDocumentTest className="scale-x-75" size={50} color="#f0cf0a" />,
+    icon: <RiCheckboxCircleLine size={50} color="#f0cf0a" />,
     info: (
       <div className="text-center md:text-left">
         <span className="text-[#00ff2f]">
@@ -248,13 +251,7 @@ export const aboutMe: AboutMe[] = [
   },
   {
     id: 3,
-    icon: (
-      <LuFileBadge2
-        className="transform scale-x-75"
-        size={60}
-        color="#f0cf0a"
-      />
-    ),
+    icon: <RiBugLine size={50} color="#f0cf0a" />,
     info: (
       <div className="text-center md:text-left">
         <span className="text-[#00ff2f]">
@@ -262,23 +259,57 @@ export const aboutMe: AboutMe[] = [
         </span>
         into two projects, effectively resolving major bugs and achieving a{' '}
         <span className="text-[#00ff2f]">
-          30-40% reduction in code duplication
+          30–40% reduction in code duplication
         </span>
-        ,promoting cleaner and more efficient code.
+        , promoting cleaner and more efficient code.
       </div>
     ),
   },
   {
     id: 4,
-    icon: <AiOutlineSecurityScan size={60} color="#f0cf0a" />,
+    icon: <RiShieldCheckLine size={50} color="#f0cf0a" />,
     info: (
       <div className="text-center md:text-left">
         I focused on security by{' '}
-        <span className="text-[#00ff2f]">preventing clickjacking</span> ,
+        <span className="text-[#00ff2f]">preventing clickjacking</span>,{' '}
         <span className="text-[#00ff2f]">
           tokens both before and after authentication
         </span>{' '}
         and fixed most of the security related issues.
+      </div>
+    ),
+  },
+  {
+    id: 5,
+    icon: <RiNodeTree size={50} color="#f0cf0a" />,
+    info: (
+      <div className="text-center md:text-left">
+        Gained experience working with{' '}
+        <span className="text-[#00ff2f]">
+          monolithic and microservices architectures
+        </span>
+        , implementing{' '}
+        <span className="text-[#00ff2f]">CSR and SSR strategies</span>, and
+        performing{' '}
+        <span className="text-[#00ff2f]">
+          manual deployments on hosting platforms
+        </span>
+        .
+      </div>
+    ),
+  },
+  {
+    id: 6,
+    icon: <RiDeviceLine size={50} color="#f0cf0a" />,
+    info: (
+      <div className="text-center md:text-left">
+        Developed{' '}
+        <span className="text-[#00ff2f]">web-to-mobile adaptations</span> for
+        iPad apps, optimizing{' '}
+        <span className="text-[#00ff2f]">cross-platform user experience</span>{' '}
+        in{' '}
+        <span className="text-[#00ff2f]">fintech and medical applications</span>
+        .
       </div>
     ),
   },
