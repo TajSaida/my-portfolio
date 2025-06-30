@@ -31,9 +31,9 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ category, skills }) => (
             <span className="text-base lg:text-md text-white">
               {skill.skill}
             </span>
-            {skill.yoe && (
+            {/* {skill.yoe && (
               <span className="text-xs text-[#525B44]">XP: {skill.yoe} YR</span>
-            )}
+            )} */}
           </div>
         </div>
       ))}
