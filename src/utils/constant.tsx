@@ -231,8 +231,8 @@ export const aboutMe: AboutMe[] = [
         <span className="text-[#00ff2f]">
           Optimized initial webpage loading{' '}
         </span>
-        by 70% using advanced techniques in React.js and using webpack,
-        resulting in a significantly faster user experience.
+        by 70% using advanced techniques, resulting in a significantly faster
+        user experience.
       </div>
     ),
   },
@@ -244,8 +244,8 @@ export const aboutMe: AboutMe[] = [
         <span className="text-[#00ff2f]">
           Implemented comprehensive Jest test cases 70% of the{' '}
         </span>
-        current application, including Redux integration, ensuring application
-        stability and maintainability.
+        current application, including NGRX state management integration,
+        ensuring application stability and maintainability.
       </div>
     ),
   },
@@ -324,23 +324,23 @@ export const experienceData: ExperienceData[] = [
       {
         id: 11,
         details:
-          'Communicated with product managers and UX designers to translate project requirements and business objectives into polished user interfaces',
+          'Built and maintained scalable Angular13+ applications using Angular Material, RXJS, and NGRX Store, enhancing UI  performance by 35% ',
       },
       {
         id: 12,
         details:
-          'Improved and expanded project platforms using React js to develop rich User Interfaces.',
+          'Upgraded Angular from version 8 to 18, modernizing legacy code and improving developer efficiency.',
       },
       {
         id: 13,
         details:
-          'Collaborated with teammates to deliver valuable features meeting business and customer needs.',
+          'Upgraded Node.js version and adjusted associated CI/CD pipelines, Docker configurations, and dependencies.',
       },
 
       {
         id: 16,
         details:
-          'Worked in an Agile team, using Azure DevOps for task tracking and actively participated in daily sync-up calls for team alignment',
+          'Separated Web UI from a monolithic architecture, refactored into microservices, and streamlined deployments',
       },
     ],
   },
@@ -354,21 +354,22 @@ export const experienceData: ExperienceData[] = [
       {
         id: 21,
         details:
-          'Worked closely with global customers spanning to troubleshoot software problems.',
+          'Migrated legacy UIs to Angular10+, reducing page load time by 45% through named chunks and lazy loading.',
       },
       {
         id: 22,
-        details: 'I&apos;m skilled at updating build files in CI/CD pipelines.',
+        details:
+          'Developed and integrated custom Angular directives and services, streamlining component reuse and development time.',
       },
       {
         id: 23,
         details:
-          'Applied emerging technologies to update and maintain site applicability.',
+          'Designed responsive UIs adhering to WCAG and cross-browser standards, improving mobile usability by 40% .',
       },
       {
         id: 14,
         details:
-          'Revised, modularized, and updated old code bases to modern development standards, reducing operating costs and improving functionality.',
+          'Applied NGRX state management to complex modules, resulting in better data consistency and maintainability .',
       },
     ],
   },
@@ -381,18 +382,18 @@ export const experienceData: ExperienceData[] = [
       {
         id: 31,
         details:
-          'Developed and managed the frontend e-commerce platform using riot js.',
+          'Designed and implemented user-facing features in Angular8, contributing to a 22% boost in user retention.',
       },
       {
         id: 32,
         details:
-          'Worked on three web applications targeting customers, selling vendors, and admin users and created global components as per the requirement.',
+          'Conducted unit testing using  jest identifying bugs early and improving release reliability.',
       },
-      // {
-      //   id: 33,
-      //   details:
-      //     'Improved the response time by 20% by updating components to pure components and imported required components from library / utilites',
-      // },
+      {
+        id: 33,
+        details:
+          'Integrated RESTful APIs using Angular services, ensuring seamless user experience across modules ',
+      },
     ],
   },
   {
@@ -405,12 +406,12 @@ export const experienceData: ExperienceData[] = [
       {
         id: 41,
         details:
-          'Performed unit testing of web applications and troubleshoot issues.',
+          'Assisted in frontend development using JavaScript and Bootstrap, implementing dynamic UI elements .',
       },
       {
         id: 42,
         details:
-          'Developed user-friendly components with validation and error handling.',
+          'Wrote documentation and trained junior developers on HTML/CSS best practices.',
       },
       {
         id: 15,
